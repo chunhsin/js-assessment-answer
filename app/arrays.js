@@ -13,7 +13,9 @@ define(function() {
     },
 
     sum: function(arr) {
-
+      return arr.reduce(function(initValue,item){
+        return initValue + item;
+      },0);
     },
 
     remove: function(arr, item) {
