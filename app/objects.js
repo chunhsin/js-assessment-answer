@@ -13,7 +13,9 @@ define(function() {
     },
 
     iterate: function(obj) {
-
+      return Object.keys(obj).map(function(key) {
+        return key + ': '+obj[key];
+      });
     }
   };
 });
