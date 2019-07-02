@@ -19,23 +19,33 @@ define(function() {
     },
 
     remove: function(arr, item) {
-
+      return arr.filter(function(arrItem) {
+        return arrItem !== item;
+      });
     },
 
     removeWithoutCopy: function(arr, item) {
-
     },
 
     append: function(arr, item) {
-
+      arr.push(item);
+      return arr;
     },
 
     truncate: function(arr) {
-
+      arr.pop();
+      return arr;
     },
 
     concat: function(arr1, arr2) {
-
+      var newArray = [];
+      arr1.forEach(function(item) {
+        newArray.push(item);
+      });
+      arr2.forEach(function(item) {
+        newArray.push(item);
+      });
+      return newArray;
     },
 
     insert: function(arr, item, index) {
