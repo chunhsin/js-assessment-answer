@@ -13,9 +13,9 @@ define(function() {
     },
 
     sum: function(arr) {
-      return arr.reduce(function(initValue,item){
+      return arr.reduce(function(initValue, item) {
         return initValue + item;
-      },0);
+      }, 0);
     },
 
     remove: function(arr, item) {
@@ -25,6 +25,10 @@ define(function() {
     },
 
     removeWithoutCopy: function(arr, item) {
+      while (arr.indexOf(item) > 0) {
+        arr.splice(arr.indexOf(item), 1);
+      }
+      return arr;
     },
 
     append: function(arr, item) {
@@ -49,11 +53,14 @@ define(function() {
     },
 
     insert: function(arr, item, index) {
-
+      arr.splice(index, 0, item);
+      return arr;
     },
 
     count: function(arr, item) {
-
+      return arr.filter(function(arrItem) {
+        return arrItem === item;
+      }).length;
     },
 
     duplicates: function(arr) {
