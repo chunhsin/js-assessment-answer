@@ -68,7 +68,9 @@ define(function() {
     },
 
     square: function(arr) {
-
+      return arr.map(function(number) {
+        return number * number;
+      });
     },
 
     findAllOccurrences: function(arr, target) {
