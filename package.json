@@ -22,7 +22,7 @@
     "base64-url": ">=2.0.0"
   },
   "devDependencies": {
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "requirejs": "^2.3.6"
   },
   "scripts": {
